@@ -1,11 +1,11 @@
-import React from 'react'
+// import React from 'react'
 
-function Buttom({change, bg}) {
+// function Buttom({change, bg}) {
 
-  return (
+//   return (
     
-    <button onClick={change} className={`img${bg}`}>Know more</button>
-  )
-}
+//     <button onClick={change} className={`img${bg}`}>Know more</button>
+//   )
+// }
 
-export default Buttom
+// export default Buttom

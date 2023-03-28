@@ -2,7 +2,7 @@ import { useState } from 'react'
 import './App.css'
 import GetItemRandom from './assets/components/GetItemRandom'
 import db_space from './assets/db/db_space.json'
-import Buttom from './assets/components/buttom'
+import Buttom from './assets/components/Button'
 
 
 
