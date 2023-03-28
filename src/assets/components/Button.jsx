@@ -4,7 +4,7 @@ function Buttom({change, bg}) {
 
   return (
     
-    <button onClick={change} className={`img${bg}`}>Know more</button>
+    <button onClick={change} className={`img${bg} buttom__space` } >Know more</button>
   )
 }
 

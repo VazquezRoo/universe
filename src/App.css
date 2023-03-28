@@ -30,6 +30,23 @@
   background-size: cover;
 }
 
+.bg__fortune1{
+  background-image: url(./assets/images/fortune/bg1.jpg);
+}
+
+.bg__fortune2{
+  background-image: url(./assets/images/fortune/bg2.jpg);
+}
+
+.bg__fortune3{
+  background-image: url(./assets/images/fortune/bg3.jpg);
+}
+
+.bg__fortune4{
+  background-image: url(./assets/images/fortune/bg4.jpg);
+}
+
+
 
 /*Estilo seccion 1*/
 
@@ -48,7 +65,7 @@
   margin-top: 70px;
 }   
 
-.centro__background{
+.centro__background.space{
   position:absolute;
   width: 300px;
   height: 300px;
@@ -59,17 +76,17 @@
 }  
 
 /*Se da estilo al titulo, la frase y el author*/
-.titulo{
+.titulo.space{
   width: 500px;
   text-align: center;
   font-family: 'Kaisei Opti', serif;
   font-size: 50px;
   color:rgb(231, 202, 60);
   text-shadow:  0 0 5px #ffffff  ;
-  margin-top: 50px;
+  margin-top: 10px;
 }
 
-.phrase { 
+.phrase.space { 
   width: 250px;
   height: 200px;
   text-align: center;
@@ -83,7 +100,7 @@
  
 }
 
-.author{
+.author.space{
   font-family: 'Kaisei Opti', serif;
   font-size: 15px;
   padding: 20px;
@@ -96,7 +113,7 @@
 /*Se da estilo al boton*/
 
 
-button{
+.buttom__space{
   height: 50px;
   width: 150px;
   padding: 16px 32px;
@@ -107,12 +124,14 @@ button{
   cursor: pointer;
   font-family: 'Kaisei Opti', serif;
   font-size: 20px;
+  margin-left: 140px;
+  margin-top: 50px;
 }
 
 
 
 @media (min-width: 520px) { 
-  .phrase {
+  .phrase.space {
     position: relative;
       height: 300px;
       width: 300px;
@@ -120,35 +139,209 @@ button{
       top: -10px;
   }
 
-  .centro{
-    position: relative;
+  .centro.space{
     left: -50px;
     top: -50px;
       width: 450px;
       height: 450px;
       opacity: .8;
   } 
-  .centro__background{
+  .centro__background.space{
+    top: 110px;
       width: 450px;
       height: 450px;
   }
  
-  .author{
+  .author.space{
     margin-top: -50px;
     font-size: 20px;
   }
 
-  .titulo{
+  .titulo.space{
     position: relative;
-    left: 30px;
-    top: -20px;
+    left: 0px;
+    top: 0px;
     font-size: 55px; 
   }
-  button{
+  .buttom__space{
     width: 200px;
     position: relative;
     font-size: 40px;
-    top: -60px;
+    top: 40px;
+    left: -20px;
+  } 
+  
+}
+@media (min-width: 720px) { 
+  .centro.space{
+      opacity: .7;
+  } 
+  .centro.space:hover{
+    opacity: .9;
+    transition: 1s;
+  }
+  
+ 
+  .author.space{
+    margin-top: -50px;
+    font-size: 20px;
+  }
+
+  .titulo.space{
+    position: relative;
+    left: 0px;
+    top: 10px;
+    font-size: 55px; 
+  }
+  .buttom__space{
+    width: 200px;
+    position: relative;
+    font-size: 40px;
+    top: -50px;
+    opacity: .6;
+    color: #221a1a;
+    top: 40px;
+    left: -20px
+  } 
+  
+  .buttom__space:hover{
+    background-color: rgb(142, 56, 142);
+    color:#fff;
+    transition:  ease-in-out .3s;
+    opacity: .9;
+  
+  } 
+
+}
+
+
+@keyframes change {
+	0% {
+		transform: rotate(0deg);
+	}  
+	100% {
+		transform: rotate(360deg);
+	}
+}
+ 
+
+
+/*Estilos galleta de la fortuna*/
+
+
+.centro.fortune{
+  height: 200px;
+  width: 200px; 
+  margin-left: 10px;
+  
+}   
+
+.centro__background.fortune{
+  position:absolute;
+  width: 250px;
+  height: 200px;
+  background-color: #ffffff;
+  background-size: cover;
+  margin-left: 280px;
+}  
+
+/*Se da estilo al titulo, la frase y el author*/
+.titulo.fortune{
+  width: 500px;
+  text-align: center;
+  font-family: 'Kaisei Opti', serif;
+  font-size: 40px;
+  color:rgb(187, 29, 116);
+  text-shadow:  0 0 5px #ffffff ,  0 0 5px #ffffff ,  0 0 5px #ffffff  ;
+  margin-top: 50px;
+}
+
+.phrase.fortune { 
+  width: 200px;
+  height: 150px;
+  text-align: center;
+  color: rgb(6, 6, 6);
+  font-family: 'Kaisei Opti', serif;
+  font-size: 20px;
+  padding: 40px 30px ;
+  text-shadow:  0 0 10px black;
+  z-index: 200;
+  margin-left: 290px;
+ 
+}
+
+.author.fortune{
+  display: flex;
+  width: 200px;
+  font-family: 'Kaisei Opti', serif;
+  font-size: 15px;
+  padding: 20px;
+  margin-top: -20px;
+  color: rgb(21, 21, 20);
+  z-index: 200;
+  text-shadow:  0 0 10px black;
+  margin-left: 280px;
+  justify-content: center;
+} 
+
+/*Se da estilo al boton*/
+
+
+.buttom__fortune{
+  height: 50px;
+  width: 150px;
+  padding: 16px 32px;
+   background: linear-gradient(0deg, rgba(73, 73, 223, 0.75) 5%, rgba(22, 96, 55, 0.75)100%); 
+  color:#fff;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  font-family: 'Kaisei Opti', serif;
+  font-size: 20px;
+  margin-left: 140px;
+  margin-top: 50px;
+}
+
+
+
+@media (min-width: 520px) { 
+  .phrase.fortune {
+    position: relative;
+      height: 300px;
+      width: 300px;
+      font-size: 35px;
+      top: -10px;
+  }
+
+  .centro.fortune{
+    position: relative;
+    left: -130px;
+    top: -50px;
+      width: 450px;
+      height: 350px;
+  } 
+  .centro__background.fortune{
+      width: 450px;
+      height: 350px;
+  }
+ 
+  .author.fortune{
+    margin-top: -50px;
+    font-size: 20px;
+    margin-left: 300px;
+  }
+
+  .titulo.fortune{
+    position: relative;
+    left: 10px;
+    top: -20px;
+    font-size: 55px; 
+  }
+  .buttom__fortune{
+    width: 200px;
+    position: relative;
+    font-size: 25px;
+    margin-top: 0px;
   } 
   
 }
@@ -173,16 +366,18 @@ button{
     top: -20px;
     font-size: 55px; 
   }
-  button{
-    width: 200px;
+  .buttom__fortune{
+    width: 400px;
     position: relative;
     font-size: 40px;
     top: -50px;
-    opacity: .6;
+    opacity: .7;
     color: #221a1a;
+    margin-top: 50px;
+    margin-left: 10px;
   } 
   
-   button:hover{
+   .buttom__fortune:hover{
     background-color: rgb(142, 56, 142);
     color:#fff;
     transition:  ease-in-out .3s;
@@ -202,3 +397,201 @@ button{
 	}
 }
  
+button.cambio__tema{
+  position: absolute;
+  top: 10px;
+  height: 30px;
+  border-radius: 20px;
+  color: white;
+  background: linear-gradient(0deg, rgba(216, 222, 173, 0.75) 5%, rgba(12, 12, 12, 0.75) 100%); 
+  margin-left: 0;
+
+}
+
+.vidPrueba{
+  z-index: 300;
+}
+
+.principalOn{
+  position: fixed;
+  margin-top: 0;
+  margin-left: 0;
+  background-color: aqua;
+  z-index: 400;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  background-color: #ffffff;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25'%3E%3Cdefs%3E%3ClinearGradient id='a' gradientUnits='userSpaceOnUse' x1='0' x2='0' y1='0' y2='100%25' gradientTransform='rotate(240)'%3E%3Cstop offset='0' stop-color='%23ffffff'/%3E%3Cstop offset='1' stop-color='%234FE'/%3E%3C/linearGradient%3E%3Cpattern patternUnits='userSpaceOnUse' id='b' width='540' height='450' x='0' y='0' viewBox='0 0 1080 900'%3E%3Cg fill-opacity='0.1'%3E%3Cpolygon fill='%23444' points='90 150 0 300 180 300'/%3E%3Cpolygon points='90 150 180 0 0 0'/%3E%3Cpolygon fill='%23AAA' points='270 150 360 0 180 0'/%3E%3Cpolygon fill='%23DDD' points='450 150 360 300 540 300'/%3E%3Cpolygon fill='%23999' points='450 150 540 0 360 0'/%3E%3Cpolygon points='630 150 540 300 720 300'/%3E%3Cpolygon fill='%23DDD' points='630 150 720 0 540 0'/%3E%3Cpolygon fill='%23444' points='810 150 720 300 900 300'/%3E%3Cpolygon fill='%23FFF' points='810 150 900 0 720 0'/%3E%3Cpolygon fill='%23DDD' points='990 150 900 300 1080 300'/%3E%3Cpolygon fill='%23444' points='990 150 1080 0 900 0'/%3E%3Cpolygon fill='%23DDD' points='90 450 0 600 180 600'/%3E%3Cpolygon points='90 450 180 300 0 300'/%3E%3Cpolygon fill='%23666' points='270 450 180 600 360 600'/%3E%3Cpolygon fill='%23AAA' points='270 450 360 300 180 300'/%3E%3Cpolygon fill='%23DDD' points='450 450 360 600 540 600'/%3E%3Cpolygon fill='%23999' points='450 450 540 300 360 300'/%3E%3Cpolygon fill='%23999' points='630 450 540 600 720 600'/%3E%3Cpolygon fill='%23FFF' points='630 450 720 300 540 300'/%3E%3Cpolygon points='810 450 720 600 900 600'/%3E%3Cpolygon fill='%23DDD' points='810 450 900 300 720 300'/%3E%3Cpolygon fill='%23AAA' points='990 450 900 600 1080 600'/%3E%3Cpolygon fill='%23444' points='990 450 1080 300 900 300'/%3E%3Cpolygon fill='%23222' points='90 750 0 900 180 900'/%3E%3Cpolygon points='270 750 180 900 360 900'/%3E%3Cpolygon fill='%23DDD' points='270 750 360 600 180 600'/%3E%3Cpolygon points='450 750 540 600 360 600'/%3E%3Cpolygon points='630 750 540 900 720 900'/%3E%3Cpolygon fill='%23444' points='630 750 720 600 540 600'/%3E%3Cpolygon fill='%23AAA' points='810 750 720 900 900 900'/%3E%3Cpolygon fill='%23666' points='810 750 900 600 720 600'/%3E%3Cpolygon fill='%23999' points='990 750 900 900 1080 900'/%3E%3Cpolygon fill='%23999' points='180 0 90 150 270 150'/%3E%3Cpolygon fill='%23444' points='360 0 270 150 450 150'/%3E%3Cpolygon fill='%23FFF' points='540 0 450 150 630 150'/%3E%3Cpolygon points='900 0 810 150 990 150'/%3E%3Cpolygon fill='%23222' points='0 300 -90 450 90 450'/%3E%3Cpolygon fill='%23FFF' points='0 300 90 150 -90 150'/%3E%3Cpolygon fill='%23FFF' points='180 300 90 450 270 450'/%3E%3Cpolygon fill='%23666' points='180 300 270 150 90 150'/%3E%3Cpolygon fill='%23222' points='360 300 270 450 450 450'/%3E%3Cpolygon fill='%23FFF' points='360 300 450 150 270 150'/%3E%3Cpolygon fill='%23444' points='540 300 450 450 630 450'/%3E%3Cpolygon fill='%23222' points='540 300 630 150 450 150'/%3E%3Cpolygon fill='%23AAA' points='720 300 630 450 810 450'/%3E%3Cpolygon fill='%23666' points='720 300 810 150 630 150'/%3E%3Cpolygon fill='%23FFF' points='900 300 810 450 990 450'/%3E%3Cpolygon fill='%23999' points='900 300 990 150 810 150'/%3E%3Cpolygon points='0 600 -90 750 90 750'/%3E%3Cpolygon fill='%23666' points='0 600 90 450 -90 450'/%3E%3Cpolygon fill='%23AAA' points='180 600 90 750 270 750'/%3E%3Cpolygon fill='%23444' points='180 600 270 450 90 450'/%3E%3Cpolygon fill='%23444' points='360 600 270 750 450 750'/%3E%3Cpolygon fill='%23999' points='360 600 450 450 270 450'/%3E%3Cpolygon fill='%23666' points='540 600 630 450 450 450'/%3E%3Cpolygon fill='%23222' points='720 600 630 750 810 750'/%3E%3Cpolygon fill='%23FFF' points='900 600 810 750 990 750'/%3E%3Cpolygon fill='%23222' points='900 600 990 450 810 450'/%3E%3Cpolygon fill='%23DDD' points='0 900 90 750 -90 750'/%3E%3Cpolygon fill='%23444' points='180 900 270 750 90 750'/%3E%3Cpolygon fill='%23FFF' points='360 900 450 750 270 750'/%3E%3Cpolygon fill='%23AAA' points='540 900 630 750 450 750'/%3E%3Cpolygon fill='%23FFF' points='720 900 810 750 630 750'/%3E%3Cpolygon fill='%23222' points='900 900 990 750 810 750'/%3E%3Cpolygon fill='%23222' points='1080 300 990 450 1170 450'/%3E%3Cpolygon fill='%23FFF' points='1080 300 1170 150 990 150'/%3E%3Cpolygon points='1080 600 990 750 1170 750'/%3E%3Cpolygon fill='%23666' points='1080 600 1170 450 990 450'/%3E%3Cpolygon fill='%23DDD' points='1080 900 1170 750 990 750'/%3E%3C/g%3E%3C/pattern%3E%3C/defs%3E%3Crect x='0' y='0' fill='url(%23a)' width='100%25' height='100%25'/%3E%3Crect x='0' y='0' fill='url(%23b)' width='100%25' height='100%25'/%3E%3C/svg%3E");
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.label__container{
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.label{
+  position: absolute;
+  font-size: 20px;
+  text-shadow:  0 0 5px #050505;
+  margin-top: 110px;
+  text-shadow:  0 0 5px #ffffff ,  0 0 5px #ffffff ,  0 0 5px #ffffff ,0 0 5px #ffffff  ;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.label.hiddeOff{
+  visibility: hidden;
+}
+
+.button-container{
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.title__principal{
+  width: 200px;
+  margin-top: -90px;
+}
+
+.button__goSpace{
+  width: 200px;
+  height: 100px;
+  font-size: 50px;
+   background-image: url(./assets/images/space.jpg);
+   background-size: cover;
+   background-position: center;
+
+
+}
+.button__goFortune{ 
+  width: 200px;
+  height: 100px;
+  font-size: 50px;
+  background-image: url(./assets/images/fortune-cookie.jpg);
+   background-size: cover;
+   background-position: center;
+
+}
+
+.button__goSpace.hiddeOn {
+  visibility:visible;
+  
+}
+
+.button__goSpace.hiddeOff {
+  visibility:hidden;
+  position: absolute;
+}
+
+.button__goFortune.hiddeOn {
+  visibility:visible;
+}
+
+.button__goFortune.hiddeOff {
+  visibility:hidden;
+  position: absolute;
+}
+
+@media (min-width: 520px){
+
+  .label{
+    margin-top: 210px;
+  }
+
+  .title__principal{
+    display: flex;
+    width: 500px;
+    font-size: 40px;
+    justify-content: center;
+  }
+  
+  .button__goSpace{
+    width: 300px;
+    height: 200px;
+  }
+  .button__goFortune{ 
+    width: 300px;
+    height: 200px;
+  }
+
+  @media (min-width: 720px){
+
+    .label{
+      font-size: 30px;
+      top: 270px;
+    }
+    
+  .title__principal{
+    position: relative;
+    display: flex;
+    width: 800px;
+    font-size: 60px;
+    justify-content: center;
+  }
+
+  .button-container{
+    flex-direction: row;
+  }
+  
+  .button__goSpace{
+    position:relative;
+    width: 300px;
+    height: 200px;
+  }
+  .button__goFortune{ 
+    position:relative;
+    width: 300px;
+    height: 200px;
+  }
+
+  .button__goSpace:hover{
+    opacity: .5;
+    transition: 1s;
+  }
+  .button__goFortune:hover{
+    opacity: .5;
+    transition: 1s;
+  }
+
+  
+
+  }
+
+}
+
+.cambio__tema{
+  position: relative;
+  width: 200px;
+  height: 50px;
+  background: linear-gradient(0deg, rgba(141, 17, 17, 0.75) 5%, rgba(127, 24, 145, 0.75) 100%); 
+  margin-left: 0;
+
+}
+
+.cambio__tema:hover{
+  opacity: .7;
+  transition: 1s;
+  color: black;
+  text-shadow:  0 0 5px #ffffff ,  0 0 5px #ffffff ,  0 0 5px #ffffff ,0 0 5px #ffffff  ;
+
+}
+/* .button__goSpace:hover{
+  
+
+}
+
+.button__goFortune:hover{
+  background-image: url(./assets/images/fortune/bg1.jpg);
+  transition: 3s;
+
+} */
+

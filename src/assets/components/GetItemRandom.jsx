@@ -4,11 +4,11 @@ function GetItemRandom({info}) {
 
   return (
       <section>
-        <h3 className='contenido titulo'>Space</h3>
+        <h3 className='contenido titulo space'>Space</h3>
         <div className='centro'>
-        <div className='centro__background'></div>
-        <article className='contenido phrase'>{info.phrase}</article>      
-        <article className='contenido author'>{info.author}</article>
+        <div className='centro__background space'></div>
+        <article className='contenido phrase space'>{info.phrase}</article>      
+        <article className='contenido author space'>{info.author}</article>
         </div>
       </section>
  
