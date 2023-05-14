@@ -1,15 +1,20 @@
 import React from 'react'
 
-function GetItemRandom({info}) {
+function GetItemRandom({info,change,bg}) {
+
+  
 
   return (
-      <section>
+      <section className='padre_space'>
         <h3 className='contenido titulo space'>Space</h3>
-        <div className='centro'>
-        <div className='centro__background space'></div>
-        <article className='contenido phrase space'>{info.phrase}</article>      
-        <article className='contenido author space'>{info.author}</article>
+        <div className='container_planet'>
+        <article className='centro__background space'>
+          <img src="/src/assets/images/planeta.png" alt="" className='planet' />
+        <p className='contenido phrase space'>{info.phrase}</p>      
+        <span className='contenido author space'>{info.author}</span>
+        </article>
         </div>
+        <button onClick={change} className={`img${bg} buttom__space` } >Know more</button>
       </section>
  
   )

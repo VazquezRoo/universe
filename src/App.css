@@ -1,15 +1,12 @@
 .App{
-  height: 100vh;
+  min-height: 100vh;
+  
   background-color: green;
   background-size: cover;
   background-position: center;
-  box-sizing: content-box;
-  padding: 0;
-  margin: 0;
   display: flex;
   flex-direction: column;
-  gap: 30px;
-  align-items: center; 
+  padding-top: 50px;
  
 }
 
@@ -51,8 +48,8 @@
 /*Estilo seccion 1*/
 
 .centro{
-  height: 300px;
-  width: 300px; 
+  height: 80%;
+  aspect-ratio: 1/1;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -61,42 +58,65 @@
   opacity: 1;
   border-radius: 50%;
   box-shadow:  0 0 10px rgb(213, 213, 213), 0 0 10px rgb(244, 243, 243) , 0 0 10px rgb(245, 242, 242);
-  margin-left: 100px;
-  margin-top: 70px;
+  
+  
 }   
 
-.centro__background.space{
-  position:absolute;
-  width: 300px;
-  height: 300px;
-  border-radius: 50%;
-  background-image: url(./assets/images/planeta.png);
-  background-size: cover;
+.padre_space{
+  display: grid;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+}
+
+.container_planet{
+  width: 90%;
+  aspect-ratio: 1/1;
+
+}
+.planet{
   animation: 40s change linear infinite;
+  width: 100%;
+}
+
+.centro__background.space{
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+  width: 100%;
+  max-width: 600px;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  background-size: cover;
+  overflow: hidden;
 }  
 
 /*Se da estilo al titulo, la frase y el author*/
 .titulo.space{
-  width: 500px;
+  width: 100%;
   text-align: center;
   font-family: 'Kaisei Opti', serif;
   font-size: 50px;
   color:rgb(231, 202, 60);
   text-shadow:  0 0 5px #ffffff  ;
-  margin-top: 10px;
 }
 
 .phrase.space { 
-  width: 250px;
-  height: 200px;
+  /* width: 250px; */
+  /* height: 200px; */
+  width: 50%;
   text-align: center;
   color: rgb(209, 215, 217);
   font-family: 'Kaisei Opti', serif;
-  font-size: 20px;
-  padding: 40px 30px ;
-  margin-top: 40px;
+  font-size: 15px;
+ 
+  
   text-shadow:  0 0 10px black, 0 0 10px black , 0 0 10px black;
-  z-index: 200;
+  z-index: 300;
+  position: absolute;
+  max-width: 430px;
  
 }
 
@@ -115,105 +135,26 @@
 
 .buttom__space{
   height: 50px;
-  width: 150px;
   padding: 16px 32px;
    background: linear-gradient(0deg, rgba(195, 34, 155, 0.75) 5%, rgba(45, 253, 239, 0.75) 100%); 
   color:#fff;
-  border-radius: 20px;
+  border-radius: 10px;
   border: none;
   cursor: pointer;
   font-family: 'Kaisei Opti', serif;
   font-size: 20px;
-  margin-left: 140px;
-  margin-top: 50px;
+  
+ 
 }
 
 
 
 @media (min-width: 520px) { 
-  .phrase.space {
-    position: relative;
-      height: 300px;
-      width: 300px;
-      font-size: 30px;
-      top: -10px;
-  }
-
-  .centro.space{
-    left: -50px;
-    top: -50px;
-      width: 450px;
-      height: 450px;
-      opacity: .8;
-  } 
-  .centro__background.space{
-    top: 110px;
-      width: 450px;
-      height: 450px;
-  }
- 
-  .author.space{
-    margin-top: -50px;
-    font-size: 20px;
-  }
-
-  .titulo.space{
-    position: relative;
-    left: 0px;
-    top: 0px;
-    font-size: 55px; 
-  }
-  .buttom__space{
-    width: 200px;
-    position: relative;
-    font-size: 40px;
-    top: 40px;
-    left: -20px;
-  } 
+  .phrase.space { 
+    font-size: 25px;
   
+  }
 }
-@media (min-width: 720px) { 
-  .centro.space{
-      opacity: .7;
-  } 
-  .centro.space:hover{
-    opacity: .9;
-    transition: 1s;
-  }
-  
- 
-  .author.space{
-    margin-top: -50px;
-    font-size: 20px;
-  }
-
-  .titulo.space{
-    position: relative;
-    left: 0px;
-    top: 10px;
-    font-size: 55px; 
-  }
-  .buttom__space{
-    width: 200px;
-    position: relative;
-    font-size: 40px;
-    top: -50px;
-    opacity: .6;
-    color: #221a1a;
-    top: 40px;
-    left: -20px
-  } 
-  
-  .buttom__space:hover{
-    background-color: rgb(142, 56, 142);
-    color:#fff;
-    transition:  ease-in-out .3s;
-    opacity: .9;
-  
-  } 
-
-}
-
 
 @keyframes change {
 	0% {
@@ -228,6 +169,12 @@
 
 /*Estilos galleta de la fortuna*/
 
+.container_fortune{
+  display: grid;
+  justify-items: center;
+  gap: 20px;
+}
+
 
 .centro.fortune{
   height: 200px;
@@ -237,51 +184,47 @@
 }   
 
 .centro__background.fortune{
-  position:absolute;
-  width: 250px;
+  margin: auto;
+  display: grid;
+  width: 90%;
+  max-width: 600px;
   height: 200px;
   background-color: #ffffff;
-  background-size: cover;
-  margin-left: 280px;
+  justify-items: center;
+
 }  
 
 /*Se da estilo al titulo, la frase y el author*/
+
 .titulo.fortune{
-  width: 500px;
+  width: 100%;
   text-align: center;
   font-family: 'Kaisei Opti', serif;
   font-size: 40px;
   color:rgb(187, 29, 116);
   text-shadow:  0 0 5px #ffffff ,  0 0 5px #ffffff ,  0 0 5px #ffffff  ;
-  margin-top: 50px;
+  margin-top: 20px;
 }
 
 .phrase.fortune { 
-  width: 200px;
-  height: 150px;
+  width: 80%;
+  height: 90%;
   text-align: center;
   color: rgb(6, 6, 6);
   font-family: 'Kaisei Opti', serif;
   font-size: 20px;
-  padding: 40px 30px ;
+ padding-top: 10px;
   text-shadow:  0 0 10px black;
   z-index: 200;
-  margin-left: 290px;
  
 }
 
 .author.fortune{
-  display: flex;
-  width: 200px;
   font-family: 'Kaisei Opti', serif;
   font-size: 15px;
-  padding: 20px;
-  margin-top: -20px;
   color: rgb(21, 21, 20);
   z-index: 200;
   text-shadow:  0 0 10px black;
-  margin-left: 280px;
-  justify-content: center;
 } 
 
 /*Se da estilo al boton*/
@@ -289,101 +232,61 @@
 
 .buttom__fortune{
   height: 50px;
-  width: 150px;
   padding: 16px 32px;
    background: linear-gradient(0deg, rgba(73, 73, 223, 0.75) 5%, rgba(22, 96, 55, 0.75)100%); 
   color:#fff;
-  border-radius: 20px;
+  border-radius: 10px;
   border: none;
   cursor: pointer;
   font-family: 'Kaisei Opti', serif;
   font-size: 20px;
-  margin-left: 140px;
-  margin-top: 50px;
 }
 
 
-
-@media (min-width: 520px) { 
-  .phrase.fortune {
-    position: relative;
-      height: 300px;
-      width: 300px;
-      font-size: 35px;
-      top: -10px;
-  }
-
-  .centro.fortune{
-    position: relative;
-    left: -130px;
-    top: -50px;
-      width: 450px;
-      height: 350px;
-  } 
-  .centro__background.fortune{
-      width: 450px;
-      height: 350px;
-  }
- 
-  .author.fortune{
-    margin-top: -50px;
-    font-size: 20px;
-    margin-left: 300px;
-  }
-
-  .titulo.fortune{
-    position: relative;
-    left: 10px;
-    top: -20px;
-    font-size: 55px; 
-  }
-  .buttom__fortune{
-    width: 200px;
-    position: relative;
-    font-size: 25px;
-    margin-top: 0px;
-  } 
-  
-}
 @media (min-width: 720px) { 
-  .centro{
-      opacity: .7;
-  } 
-  .centro:hover{
-    opacity: .9;
-    transition: 1s;
+
+
+  .phrase.space { 
+    font-size: 35px;
   }
-  
- 
-  .author{
-    margin-top: -50px;
+
+  .titulo.space{
+
+    font-size: 70px;
+
+  }
+  .buttom__space{
+    height: 70px;   
+    font-size: 40px;  
+  }
+  .author.space{
+    font-size: 25px;
+  } 
+
+  button.cambio__tema{
     font-size: 20px;
   }
 
-  .titulo{
-    position: relative;
-    left: 20px;
-    top: -20px;
-    font-size: 55px; 
+
+  .centro__background.fortune{
+    height: 400px; 
+  }  
+  
+  .phrase.fortune { 
+    font-size: 35px;
   }
-  .buttom__fortune{
-    width: 400px;
-    position: relative;
+
+  .author.fortune{
+        font-size: 25px;
+
+  } 
+
+  .text__title{
+    font-size: 50px;
+  }
+  .label{
     font-size: 40px;
-    top: -50px;
-    opacity: .7;
-    color: #221a1a;
-    margin-top: 50px;
-    margin-left: 10px;
-  } 
-  
-   .buttom__fortune:hover{
-    background-color: rgb(142, 56, 142);
-    color:#fff;
-    transition:  ease-in-out .3s;
-    opacity: .9;
-  
-  } 
+  }
 
 }
 
@@ -398,33 +301,34 @@
 }
  
 button.cambio__tema{
-  position: absolute;
-  top: 10px;
+  
+ 
   height: 30px;
-  border-radius: 20px;
+  border-radius: 0px;
   color: white;
-  background: linear-gradient(0deg, rgba(216, 222, 173, 0.75) 5%, rgba(12, 12, 12, 0.75) 100%); 
-  margin-left: 0;
+  background: linear-gradient(0deg, rgba(216, 222, 173, 0.75) 5%, rgba(103, 98, 98, 0.75) 100%); 
+  max-width: 400px;
+  align-self: center;
 
 }
 
 .vidPrueba{
   z-index: 300;
 }
+.principalOff{
+  visibility: hidden;
+  position: absolute  ;
+}
 
 .principalOn{
-  position: fixed;
-  margin-top: 0;
-  margin-left: 0;
-  background-color: aqua;
+  top: 0;
+  position: absolute;
   z-index: 400;
   width: 100%;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
+  min-height: 100vh;
+  display: grid;
   justify-content: center;
-  align-items: center;
-  gap: 50px;
+  padding-top: 20px;
   background-color: #ffffff;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25'%3E%3Cdefs%3E%3ClinearGradient id='a' gradientUnits='userSpaceOnUse' x1='0' x2='0' y1='0' y2='100%25' gradientTransform='rotate(240)'%3E%3Cstop offset='0' stop-color='%23ffffff'/%3E%3Cstop offset='1' stop-color='%234FE'/%3E%3C/linearGradient%3E%3Cpattern patternUnits='userSpaceOnUse' id='b' width='540' height='450' x='0' y='0' viewBox='0 0 1080 900'%3E%3Cg fill-opacity='0.1'%3E%3Cpolygon fill='%23444' points='90 150 0 300 180 300'/%3E%3Cpolygon points='90 150 180 0 0 0'/%3E%3Cpolygon fill='%23AAA' points='270 150 360 0 180 0'/%3E%3Cpolygon fill='%23DDD' points='450 150 360 300 540 300'/%3E%3Cpolygon fill='%23999' points='450 150 540 0 360 0'/%3E%3Cpolygon points='630 150 540 300 720 300'/%3E%3Cpolygon fill='%23DDD' points='630 150 720 0 540 0'/%3E%3Cpolygon fill='%23444' points='810 150 720 300 900 300'/%3E%3Cpolygon fill='%23FFF' points='810 150 900 0 720 0'/%3E%3Cpolygon fill='%23DDD' points='990 150 900 300 1080 300'/%3E%3Cpolygon fill='%23444' points='990 150 1080 0 900 0'/%3E%3Cpolygon fill='%23DDD' points='90 450 0 600 180 600'/%3E%3Cpolygon points='90 450 180 300 0 300'/%3E%3Cpolygon fill='%23666' points='270 450 180 600 360 600'/%3E%3Cpolygon fill='%23AAA' points='270 450 360 300 180 300'/%3E%3Cpolygon fill='%23DDD' points='450 450 360 600 540 600'/%3E%3Cpolygon fill='%23999' points='450 450 540 300 360 300'/%3E%3Cpolygon fill='%23999' points='630 450 540 600 720 600'/%3E%3Cpolygon fill='%23FFF' points='630 450 720 300 540 300'/%3E%3Cpolygon points='810 450 720 600 900 600'/%3E%3Cpolygon fill='%23DDD' points='810 450 900 300 720 300'/%3E%3Cpolygon fill='%23AAA' points='990 450 900 600 1080 600'/%3E%3Cpolygon fill='%23444' points='990 450 1080 300 900 300'/%3E%3Cpolygon fill='%23222' points='90 750 0 900 180 900'/%3E%3Cpolygon points='270 750 180 900 360 900'/%3E%3Cpolygon fill='%23DDD' points='270 750 360 600 180 600'/%3E%3Cpolygon points='450 750 540 600 360 600'/%3E%3Cpolygon points='630 750 540 900 720 900'/%3E%3Cpolygon fill='%23444' points='630 750 720 600 540 600'/%3E%3Cpolygon fill='%23AAA' points='810 750 720 900 900 900'/%3E%3Cpolygon fill='%23666' points='810 750 900 600 720 600'/%3E%3Cpolygon fill='%23999' points='990 750 900 900 1080 900'/%3E%3Cpolygon fill='%23999' points='180 0 90 150 270 150'/%3E%3Cpolygon fill='%23444' points='360 0 270 150 450 150'/%3E%3Cpolygon fill='%23FFF' points='540 0 450 150 630 150'/%3E%3Cpolygon points='900 0 810 150 990 150'/%3E%3Cpolygon fill='%23222' points='0 300 -90 450 90 450'/%3E%3Cpolygon fill='%23FFF' points='0 300 90 150 -90 150'/%3E%3Cpolygon fill='%23FFF' points='180 300 90 450 270 450'/%3E%3Cpolygon fill='%23666' points='180 300 270 150 90 150'/%3E%3Cpolygon fill='%23222' points='360 300 270 450 450 450'/%3E%3Cpolygon fill='%23FFF' points='360 300 450 150 270 150'/%3E%3Cpolygon fill='%23444' points='540 300 450 450 630 450'/%3E%3Cpolygon fill='%23222' points='540 300 630 150 450 150'/%3E%3Cpolygon fill='%23AAA' points='720 300 630 450 810 450'/%3E%3Cpolygon fill='%23666' points='720 300 810 150 630 150'/%3E%3Cpolygon fill='%23FFF' points='900 300 810 450 990 450'/%3E%3Cpolygon fill='%23999' points='900 300 990 150 810 150'/%3E%3Cpolygon points='0 600 -90 750 90 750'/%3E%3Cpolygon fill='%23666' points='0 600 90 450 -90 450'/%3E%3Cpolygon fill='%23AAA' points='180 600 90 750 270 750'/%3E%3Cpolygon fill='%23444' points='180 600 270 450 90 450'/%3E%3Cpolygon fill='%23444' points='360 600 270 750 450 750'/%3E%3Cpolygon fill='%23999' points='360 600 450 450 270 450'/%3E%3Cpolygon fill='%23666' points='540 600 630 450 450 450'/%3E%3Cpolygon fill='%23222' points='720 600 630 750 810 750'/%3E%3Cpolygon fill='%23FFF' points='900 600 810 750 990 750'/%3E%3Cpolygon fill='%23222' points='900 600 990 450 810 450'/%3E%3Cpolygon fill='%23DDD' points='0 900 90 750 -90 750'/%3E%3Cpolygon fill='%23444' points='180 900 270 750 90 750'/%3E%3Cpolygon fill='%23FFF' points='360 900 450 750 270 750'/%3E%3Cpolygon fill='%23AAA' points='540 900 630 750 450 750'/%3E%3Cpolygon fill='%23FFF' points='720 900 810 750 630 750'/%3E%3Cpolygon fill='%23222' points='900 900 990 750 810 750'/%3E%3Cpolygon fill='%23222' points='1080 300 990 450 1170 450'/%3E%3Cpolygon fill='%23FFF' points='1080 300 1170 150 990 150'/%3E%3Cpolygon points='1080 600 990 750 1170 750'/%3E%3Cpolygon fill='%23666' points='1080 600 1170 450 990 450'/%3E%3Cpolygon fill='%23DDD' points='1080 900 1170 750 990 750'/%3E%3C/g%3E%3C/pattern%3E%3C/defs%3E%3Crect x='0' y='0' fill='url(%23a)' width='100%25' height='100%25'/%3E%3Crect x='0' y='0' fill='url(%23b)' width='100%25' height='100%25'/%3E%3C/svg%3E");
   background-attachment: fixed;
@@ -432,23 +336,28 @@ button.cambio__tema{
 }
 
 .label__container{
+  width: 100%;
   display: flex;
   gap: 10px;
   flex-direction: column;
   align-items: center;
+  max-width: 1000px;
 }
 
 .label{
-  position: absolute;
-  font-size: 20px;
+  font-size: 30px;
   text-shadow:  0 0 5px #050505;
-  margin-top: 110px;
   text-shadow:  0 0 5px #ffffff ,  0 0 5px #ffffff ,  0 0 5px #ffffff ,0 0 5px #ffffff  ;
   font-family: 'Courier New', Courier, monospace;
 }
 
 .label.hiddeOff{
   visibility: hidden;
+}
+
+.text__title{
+  margin: auto;
+  text-align: center;
 }
 
 .button-container{
@@ -458,13 +367,16 @@ button.cambio__tema{
 }
 
 .title__principal{
-  width: 200px;
-  margin-top: -90px;
-}
+  max-width: 500px;
+  width: 100%;
+  display: grid;
+  justify-items: center;
+ }
 
 .button__goSpace{
-  width: 200px;
-  height: 100px;
+  max-width: 500px;
+  width: 90%;
+  aspect-ratio: 2/1;
   font-size: 50px;
    background-image: url(./assets/images/space.jpg);
    background-size: cover;
@@ -473,9 +385,10 @@ button.cambio__tema{
 
 }
 .button__goFortune{ 
-  width: 200px;
-  height: 100px;
-  font-size: 50px;
+  max-width: 500px;
+  width: 90%;
+  aspect-ratio: 2/1;
+    font-size: 50px;
   background-image: url(./assets/images/fortune-cookie.jpg);
    background-size: cover;
    background-position: center;
@@ -486,10 +399,18 @@ button.cambio__tema{
   visibility:visible;
   
 }
+.button__goSpace:hover{
+  opacity: .8;
+  cursor: pointer;
+}
 
 .button__goSpace.hiddeOff {
   visibility:hidden;
   position: absolute;
+}
+.button__goFortune:hover{
+  opacity: .8;
+  cursor: pointer;
 }
 
 .button__goFortune.hiddeOn {
@@ -499,73 +420,6 @@ button.cambio__tema{
 .button__goFortune.hiddeOff {
   visibility:hidden;
   position: absolute;
-}
-
-@media (min-width: 520px){
-
-  .label{
-    margin-top: 210px;
-  }
-
-  .title__principal{
-    display: flex;
-    width: 500px;
-    font-size: 40px;
-    justify-content: center;
-  }
-  
-  .button__goSpace{
-    width: 300px;
-    height: 200px;
-  }
-  .button__goFortune{ 
-    width: 300px;
-    height: 200px;
-  }
-
-  @media (min-width: 720px){
-
-    .label{
-      font-size: 30px;
-      top: 270px;
-    }
-    
-  .title__principal{
-    position: relative;
-    display: flex;
-    width: 800px;
-    font-size: 60px;
-    justify-content: center;
-  }
-
-  .button-container{
-    flex-direction: row;
-  }
-  
-  .button__goSpace{
-    position:relative;
-    width: 300px;
-    height: 200px;
-  }
-  .button__goFortune{ 
-    position:relative;
-    width: 300px;
-    height: 200px;
-  }
-
-  .button__goSpace:hover{
-    opacity: .5;
-    transition: 1s;
-  }
-  .button__goFortune:hover{
-    opacity: .5;
-    transition: 1s;
-  }
-
-  
-
-  }
-
 }
 
 .cambio__tema{
@@ -578,20 +432,22 @@ button.cambio__tema{
 }
 
 .cambio__tema:hover{
-  opacity: .7;
-  transition: 1s;
+  background: linear-gradient(0deg, rgba(114, 117, 94, 0.75) 5%, rgba(103, 88, 88, 0.75) 100%); 
+
+  transition: .2s;
   color: black;
-  text-shadow:  0 0 5px #ffffff ,  0 0 5px #ffffff ,  0 0 5px #ffffff ,0 0 5px #ffffff  ;
-
-}
-/* .button__goSpace:hover{
-  
+  cursor: pointer;
 
 }
 
-.button__goFortune:hover{
-  background-image: url(./assets/images/fortune/bg1.jpg);
-  transition: 3s;
+.buttom__fortune:hover{
+  background: linear-gradient(0deg, rgba(119, 119, 198, 0.75) 5%, rgba(44, 176, 104, 0.75)100%); 
+  transition: .2s;
+  cursor: pointer;
+}
 
-} */
-
+   .buttom__space:hover{
+    background: linear-gradient(0deg, rgba(220, 140, 200, 0.75) 5%, rgba(80, 207, 198, 0.75) 100%); 
+    transition: .2s;
+    cursor: pointer;
+  }
