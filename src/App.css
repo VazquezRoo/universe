@@ -86,7 +86,7 @@
   align-items: center;
   justify-items: center;
   width: 100%;
-  max-width: 600px;
+  max-width: 450px;
   aspect-ratio: 1/1;
   border-radius: 50%;
   background-size: cover;
@@ -104,19 +104,15 @@
 }
 
 .phrase.space { 
-  /* width: 250px; */
-  /* height: 200px; */
   width: 50%;
   text-align: center;
   color: rgb(209, 215, 217);
   font-family: 'Kaisei Opti', serif;
   font-size: 15px;
- 
-  
   text-shadow:  0 0 10px black, 0 0 10px black , 0 0 10px black;
   z-index: 300;
   position: absolute;
-  max-width: 430px;
+  max-width: 330px;
  
 }
 
@@ -232,7 +228,6 @@
 
 .buttom__fortune{
   height: 50px;
-  padding: 16px 32px;
    background: linear-gradient(0deg, rgba(73, 73, 223, 0.75) 5%, rgba(22, 96, 55, 0.75)100%); 
   color:#fff;
   border-radius: 10px;
@@ -246,9 +241,6 @@
 @media (min-width: 720px) { 
 
 
-  .phrase.space { 
-    font-size: 35px;
-  }
 
   .titulo.space{
 
@@ -260,7 +252,7 @@
     font-size: 40px;  
   }
   .author.space{
-    font-size: 25px;
+    font-size: 20px;
   } 
 
   button.cambio__tema{
