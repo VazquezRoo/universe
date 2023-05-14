@@ -9,7 +9,7 @@ function GetItemRandom({info,change,bg}) {
         <h3 className='contenido titulo space'>Space</h3>
         <div className='container_planet'>
         <article className='centro__background space'>
-          <img src="/src/assets/images/planeta.png" alt="" className='planet' />
+          <img src="/assets/images/planeta.png" alt="" className='planet' />
         <p className='contenido phrase space'>{info.phrase}</p>      
         <span className='contenido author space'>{info.author}</span>
         </article>
